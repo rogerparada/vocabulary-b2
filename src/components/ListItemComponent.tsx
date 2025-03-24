@@ -7,7 +7,7 @@ type ListItemComponentProps = {
 function ListItemComponent({ word }: ListItemComponentProps) {
 	return (
 		<div>
-			<Link className="capitalize text-lg md:text-3xl font-thin" href={`/definition/${word}`}>
+			<Link className="capitalize text-lg md:text-3xl font-thin" href={`/definition?word=${word}`}>
 				{word}
 			</Link>
 		</div>

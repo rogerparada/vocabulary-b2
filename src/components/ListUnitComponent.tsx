@@ -2,7 +2,7 @@ import ListItemComponent from "./ListItemComponent";
 
 type ListUnitComponentProps = {
 	title: string;
-	unit: { word: string; u: number }[];
+	unit: string[];
 };
 
 export default function ListUnitComponent({ title, unit }: ListUnitComponentProps) {
@@ -14,7 +14,7 @@ export default function ListUnitComponent({ title, unit }: ListUnitComponentProp
 			<hr className="mb-5" />
 			<div className="flex flex-wrap justify-center gap-5">
 				{unit.map((item, index) => {
-					return <ListItemComponent word={item.word} key={index} />;
+					return <ListItemComponent word={item} key={index} />;
 				})}
 			</div>
 		</div>
