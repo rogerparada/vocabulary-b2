@@ -1,26 +1,208 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+	--radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+#root {
+	background-color: black;
+}
+.App {
+	text-align: center;
+	background-color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.main {
+	position: relative;
+	border: 1px solid black;
+	border-radius: var(--radius);
+	padding: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-Content {
+	background-color: white;
+	min-height: calc(100vh - 100px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+}
+
+footer {
+	min-height: 50px;
+}
+
+footer div {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+}
+
+footer div span {
+	margin-left: 5px;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+.Italic {
+	font-style: italic;
+}
+
+#id {
+	color: white;
+}
+
+.title {
+	text-transform: capitalize;
+	margin-right: 1rem;
+	font-weight: bolder;
+	font-size: 5rem;
+}
+
+.phonetic {
+	font-weight: 200;
+	margin-right: 1rem;
+}
+
+.spoiler {
+	margin-left: 1rem;
+	font-size: 1.1rem;
+	cursor: pointer;
+	border: #b2b2b2 solid 1px;
+	border-radius: 5px;
+	margin-top: 1rem;
+}
+
+.spoiler summary {
+	font-style: italic;
+	font-weight: bolder;
+	border-bottom: #b2b2b2 solid 1px;
+	padding-left: 1rem;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.spoiler ul li {
+	font-size: 1.1rem;
+	list-style-type: circle;
+	text-transform: capitalize;
+	list-style: none;
+	margin-left: 2rem;
+}
+
+.HighLink {
+	font-weight: bolder;
+}
+
+.list {
+	background-color: white;
+}
+
+#word {
+	border: 1px solid black;
+	padding: 2rem;
+	border-radius: var(--radius);
+	background-color: white;
+}
+
+.error {
+	position: relative;
+	border: 1px solid black;
+	padding: 2rem;
+	border-radius: var(--radius);
+	background-color: white;
+	text-align: center;
+}
+
+.Speech {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	font-size: 1.3rem;
+}
+
+#word {
+	position: relative;
+}
+
+.Speech span {
+	font-weight: 200;
+	font-style: italic;
+}
+
+.no-link {
+	margin-left: 0rem;
+	margin-top: 0rem;
+	cursor: text;
+	font-style: normal !important;
+	font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+	.title {
+		font-size: 3.5rem;
+		line-height: 7rem;
+	}
+
+	.Speech {
+		--margin: 0rem;
+		--font: 1rem;
+		margin-top: var(--margin);
+		margin-left: var(--margin);
+		font-size: var(--font);
+	}
+
+	.Speech span {
+		font-weight: 200;
+		font-style: italic;
+	}
+
+	ul li {
+		font-size: var(--font);
+		font-weight: 200;
+		text-align: justify;
+	}
+	ul li span {
+		margin-left: var(--margin);
+		margin-top: var(--margin);
+		font-style: italic;
+		font-size: var(--font);
+	}
+
+	.spoiler {
+		margin-left: var(--margin);
+		font-size: var(--font);
+		cursor: pointer;
+	}
+
+	.spoiler summary {
+		font-style: italic;
+		font-weight: bolder;
+	}
+
+	.spoiler ul li {
+		font-size: var(--font);
+		list-style-type: circle;
+		text-transform: capitalize;
+		list-style: none;
+	}
+	#word {
+		border-radius: 0;
+	}
+
+	.error {
+		border-radius: 0;
+	}
 }
