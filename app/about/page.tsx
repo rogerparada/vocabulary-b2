@@ -22,13 +22,18 @@ export default function AboutComponent() {
 						</Link>
 					</div>
 					<div className="">
+						<Link href="https://nextjs.org/" target="blank" className="font-bold text-3xl hover:text-slate-700 transition-colors duration-300">
+							Next.JS
+						</Link>
+					</div>
+					<div className="">
 						<Link href="https://github.com" target="blank" className="font-bold text-3xl hover:text-fuchsia-900 transition-colors duration-300">
 							GitHub
 						</Link>
 					</div>
 					<div className="">
-						<Link href="https://render.com" target="blank" className="font-bold text-3xl hover:text-green-700 transition-colors duration-300">
-							Render
+						<Link href="https://vercel.com" target="blank" className="font-bold text-3xl hover:text-blue-700 transition-colors duration-300">
+							Vercel
 						</Link>
 					</div>
 				</div>
