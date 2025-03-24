@@ -11,10 +11,7 @@ export default function Home() {
 		<div className="App-Content container mx-auto">
 			<div className="list">
 				<WordComponent newWord={"Vocabulary"} />
-				<p className="mt-10 mx-3 font-bold">
-					Some words: {randomUnit}
-					{flip}
-				</p>
+				<p className="mt-10 mx-3 font-bold">Some words:</p>
 				<div className="flex flex-wrap gap-3 mx-3 mb-10 md:mb-3">
 					{words.map((item, index) => (
 						<ListItemComponent word={item} key={index} />
